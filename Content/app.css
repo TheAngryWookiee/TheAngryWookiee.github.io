@@ -23,10 +23,6 @@ body, h1, p {
     padding: 50px; 
 }
 
-/* Container style */
-.container {
-    margin-top: 20px; 
-}
 
 /* Bottom Navbar styling */
 .fixed-bottom {
