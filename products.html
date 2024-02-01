@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Title</title>
-    <link rel="stylesheet" href="./Content/app.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Content/app.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <style>
+        body {
+            background-image: url('./Images/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-light" style="background-color: #2c3e50!important;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navigation</a>
+            <img class="logo" src="./Images/logo.png" alt="">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,12 +48,12 @@
     <!-- Content -->
     <div class="container">
         <!-- Home Page Content -->
-        <div id="homePage">
-            <h1>Welcome to Cerberus</h1>
-            <p>Here at Cerberus, we strive to advance humanity past its limits by pushing technology ever forward. From advanced web development headed by Dr. Goralski the most revered Computer Engineer of our generation, all the way to robotics, ship design and sophisticated artificial intelligence. Together humanity moves forward!</p>
-        </div>
+        <div id="homePage" style="color: #fff!important;"></div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./Scripts/app.js"></script>
 </body>
 </html>
