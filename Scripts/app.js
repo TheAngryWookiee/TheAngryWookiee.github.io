@@ -70,6 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     injectContent('projectsPage', 'Our Projects', 'Details about our projects go here...');
     injectContent('servicesPage', 'Our Services', 'Details about our services go here...');
     injectContent('aboutUsPage', 'About Us', 'Details about us go here...');
-    injectContent('contactUsPage', 'Contact Us', 'Contact us');
+
 
 });
