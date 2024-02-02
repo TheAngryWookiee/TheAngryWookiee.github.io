@@ -26,3 +26,18 @@
 .fixed-bottom .navbar-text {
     color: #fff;
 }
+
+P { text-align: center }
+H1 { text-align: center }
+H2 { text-align: center }
+
+/* Makes input forms less ugly */
+form{
+    display:flex;
+    flex-direction: column;
+}
+
+input {
+    display: inline-block;
+    margin-right: 10px;
+}

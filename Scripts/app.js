@@ -22,10 +22,13 @@
 function injectContent(pageId, title, content, imageUrl) {
     const pageElement = document.getElementById(pageId);
 
+    // Check if element exists.
     if (!pageElement) {
         console.error(`Element with id '${pageId}' not found.`);
         return;
     }
+
+
 
     let contentHtml = `<h1>${title}</h1>`;
 
@@ -39,6 +42,30 @@ function injectContent(pageId, title, content, imageUrl) {
     pageElement.innerHTML = contentHtml;
 }
 
+function injectParagraph (pageId, title, content, imageUrl) {
+    const pageElement = document.getElementById(pageId);
+
+    let contentHtml = '';
+
+    // Check if page has content already, if so, add to content, else create from scratch.
+    if (pageElement.innerHTML) {
+        contentHtml = pageElement.innerHTML
+    }
+    else {
+        contentHtml = "";
+    }
+
+    contentHtml += '<h2>${title}</h2>'
+
+    // Check if imageUrl is provided before including the img tag
+    if (imageUrl) {
+        contentHtml += `<img src="${imageUrl}" alt="${title} Image" class="img-fluid">`;
+    }
+
+    contentHtml += `<p>${content}</p>`;
+
+    pageElement.innerHTML = contentHtml;
+}
 // Function to change the Products link to Projects
 document.querySelector('.navbar-nav li:nth-child(2) a').innerText = 'Projects';
 
