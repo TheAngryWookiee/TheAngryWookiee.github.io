@@ -27,9 +27,31 @@
     color: #fff;
 }
 
-P { text-align: center }
-H1 { text-align: center }
-H2 { text-align: center }
+P {
+    text-align: center;
+    color: saddlebrown;
+}
+H1 {
+    text-align: center;
+    color: saddlebrown;
+}
+H2 {
+    text-align: center;
+    color: saddlebrown;
+}
+
+/* make image not ugly */
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+    clip-path: circle();
+}
 
 /* Makes input forms less ugly */
 form{
