@@ -22,6 +22,11 @@
 function injectContent(pageId, title, content, imageUrl) {
     const pageElement = document.getElementById(pageId);
 
+    if (!pageElement) {
+        console.error(`Element with id '${pageId}' not found.`);
+        return;
+    }
+
     let contentHtml = `<h1>${title}</h1>`;
 
     // Check if imageUrl is provided before including the img tag
@@ -33,7 +38,6 @@ function injectContent(pageId, title, content, imageUrl) {
 
     pageElement.innerHTML = contentHtml;
 }
-
 
 // Function to change the Products link to Projects
 document.querySelector('.navbar-nav li:nth-child(2) a').innerText = 'Projects';
@@ -59,11 +63,13 @@ document.body.appendChild(bottomNavbar);
 
 document.addEventListener('DOMContentLoaded', function () {
     // Inject content into pages
-    injectContent('homePage', 'Welcome to Cerberus', 'Here at Cerberus, we strive to advance humanity past its limits by pushing technology ever forward. From advanced web development headed by Dr. Goralski the most revered Computer Engineer of our generation, all the way to robotics, ship design and sophisticated artificial intelligence. Together humanity moves forward!');
+    injectContent('homePage', 'Welcome to Cerberus', 'Here at Cerberus,' +
+        ' we strive to advance humanity past its limits by pushing technology ever forward. From advanced web development headed by Dr.' +
+        ' Goralski the most revered Computer Engineer of our generation, all the way to robotics, ship design and sophisticated artificial intelligence. ' +
+        'Together humanity moves forward!');
     injectContent('projectsPage', 'Our Projects', 'Details about our projects go here...');
     injectContent('servicesPage', 'Our Services', 'Details about our services go here...');
     injectContent('aboutUsPage', 'About Us', 'Details about us go here...');
+    injectContent('contactUsPage', 'Contact Us', 'Contact us');
 
- 
 });
-
