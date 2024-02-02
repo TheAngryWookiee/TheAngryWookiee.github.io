@@ -57,9 +57,15 @@ img {
 form{
     display:flex;
     flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    max-width:500px;
 }
 
 input {
     display: inline-block;
     margin-right: 10px;
+}
+body {
+
 }
