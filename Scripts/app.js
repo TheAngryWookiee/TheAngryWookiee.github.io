@@ -39,23 +39,15 @@ function injectContent(pageId, title, content, imageUrl) {
 
     contentHtml += `<p>${content}</p>`;
 
-    pageElement.innerHTML = contentHtml;
+    pageElement.innerHTML += contentHtml;
 }
 
 function injectParagraph (pageId, title, content, imageUrl) {
     const pageElement = document.getElementById(pageId);
 
-    let contentHtml = '';
+    let contentHtml = ``;
 
-    // Check if page has content already, if so, add to content, else create from scratch.
-    if (pageElement.innerHTML) {
-        contentHtml = pageElement.innerHTML
-    }
-    else {
-        contentHtml = "";
-    }
-
-    contentHtml += '<h2>${title}</h2>'
+    contentHtml += `<h2>${title}</h2>`;
 
     // Check if imageUrl is provided before including the img tag
     if (imageUrl) {
@@ -64,7 +56,7 @@ function injectParagraph (pageId, title, content, imageUrl) {
 
     contentHtml += `<p>${content}</p>`;
 
-    pageElement.innerHTML = contentHtml;
+    pageElement.innerHTML += contentHtml;
 }
 // Function to change the Products link to Projects
 document.querySelector('.navbar-nav li:nth-child(2) a').innerText = 'Projects';
@@ -94,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ' we strive to advance humanity past its limits by pushing technology ever forward. From advanced web development headed by Dr.' +
         ' Goralski the most revered Computer Engineer of our generation, all the way to robotics, ship design and sophisticated artificial intelligence. ' +
         'Together humanity moves forward!');
+    injectContent('homePage', '', 'test');
     injectContent('projectsPage', 'Our Projects', 'Details about our projects go here...');
     injectContent('servicesPage', 'Our Services', 'Details about our services go here...');
     injectContent('aboutUsPage', 'About Us', 'Details about us go here...');
