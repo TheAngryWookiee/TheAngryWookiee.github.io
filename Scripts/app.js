@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ' we strive to advance humanity past its limits by pushing technology ever forward. From advanced web development headed by Dr.' +
         ' Goralski the most revered Computer Engineer of our generation, all the way to robotics, ship design and sophisticated artificial intelligence. ' +
         'Together humanity moves forward!');
-    injectParagraph('homePage', '', 'Test')
     injectContent('projectsPage', 'Our Projects', 'Details about our projects go here...');
     injectContent('servicesPage', 'Our Services', 'Details about our services go here...');
     injectContent('aboutUsPage', 'About Us', 'Details about us go here...');
